@@ -1,6 +1,9 @@
 //const baseUrl = "http://localhost:3000/paletas";
 const baseUrl = "https://api-elgeladon-simples.onrender.com/paletas"
 
+const modalError = document.querySelector(".modalError");
+modalError.style.display = "none";
+
 function modalErrorA() {
   const modalError = document.querySelector(".modalError");
   modalError.style.display = "block";
@@ -26,6 +29,7 @@ async function findAllPaletas() {
 
   if (paletas.mensagem) {
     receberMensagem(paletas);
+    paletas=""
   } else {
     paletas.forEach((paleta) => {
       document.getElementById("paletaList").insertAdjacentHTML(
@@ -56,6 +60,7 @@ async function findPaletaById() {
 
   if (paleta.mensagem) {
     receberMensagem(paleta);
+    paleta=""
   } else {
     const paletaEscolhidaDiv = document.getElementById("paletaEscolhida");
 
