@@ -1,4 +1,5 @@
-const baseUrl = "http://localhost:3000/paletas";
+//const baseUrl = "http://localhost:3000/paletas";
+const baseUrl = "https://api-elgeladon-simples.onrender.com/paletas"
 
 function modalErrorA() {
   const modalError = document.querySelector(".modalError");
